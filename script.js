@@ -94,6 +94,7 @@ formulario.addEventListener("submit",(e)=>{
         addCart(myLibrary)
     }
     llenar.reset();
+    modal.close()
 })
 
 
