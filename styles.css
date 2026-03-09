@@ -4,6 +4,7 @@
 
 .container{
     display: flex;
+    flex-direction: column;
 }
 
 .header{
@@ -35,3 +36,57 @@
     align-items: center;
     gap: 10px;
 }
+
+.header_form{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: space-between;
+    margin-bottom: 1.3rem;
+}
+
+.header_form > p{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.header_form > button{
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+.formulario > form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#identificador{
+    margin-bottom: 0.5rem;
+    border: 1px solid blue;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid black;
+}
+
+.marca{
+    display: flex;
+    border: 1px solid black;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.campo{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3,1fr);
+}
+
