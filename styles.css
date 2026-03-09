@@ -66,6 +66,7 @@
 #identificador{
     margin-bottom: 0.5rem;
     border: 1px solid blue;
+    font-size: 19px;
 }
 
 .info{
@@ -75,6 +76,18 @@
     border: 1px solid black;
 }
 
+.info > label {
+    font-size: 20px;
+}
+
+.info > input{
+    height: 1.6rem;
+    width: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
 .marca{
     display: flex;
     border: 1px solid black;
@@ -82,6 +95,24 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.marca > label{
+    font-size: 20px;
+}
+
+.marca > input{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.formulario > form > button{
+    margin-inline: 7.5rem;
+    font-size: 17px;
+    padding: 0.4rem;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 .campo{
