@@ -16,3 +16,14 @@ function addBookToLibrary(nombre,autor,pagina,estado){
     myLibrary.push(libro)
 }
 
+const abrir_modal = document.getElementById("abrir_modal")
+const modal = document.getElementById("modal")
+const cerrar_modal = document.getElementById("cerrar_modal")
+
+abrir_modal.addEventListener("click",()=>{
+    modal.showModal();
+})
+
+cerrar_modal.addEventListener("click",()=>{
+    modal.close();
+})
