@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(17, 177, 17);
+    border-radius: 10px;
+}
+
+.header > img{
+    height: 8rem;
+    width: auto;
+}
+
+.header > h1{
+    color: white;
+    font-size: 3rem;
+}
+
+.header > button{
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
