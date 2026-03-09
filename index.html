@@ -11,11 +11,48 @@
         <div class="header">
             <img src="./images/libros icono.png" alt="libros">
             <h1>My Library</h1>
-            <button>
+            <button id="abrir_modal">
                 <img src="./images/library_add.svg" alt="añadir">
                 Add Book
             </button>
         </div>
+
+        <dialog id="modal">
+            <div class="header_form">
+                <p>Add Book</p>
+                <button id="cerrar_modal">X</button>
+            </div>
+            <div class="formulario">
+                <form action="" method="dialog">
+                    <div class="id"></div>
+                    <div class="info">
+                        <label for="nombre">Name: </label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="info">
+                        <label for="autor">Author</label>
+                        <input type="text" id="autor" name="autor">
+                    </div>
+                    <div class="info">
+                        <label for="paginas">Pages: </label>
+                        <input type="number" id="paginas" name="paginas">
+                    </div>
+                    <div class="marca">
+                        <label for="estado">Read: </label>
+                        <input type="checkbox" id="estado" name="estado">
+                        <label for="estado">Not Read: </label>
+                        <input type="checkbox" id="estado" name="estado">
+                    </div>
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </dialog>
+
+
+
+
+
+        
         <div class="campo"></div>
     </div>
 
