@@ -17,7 +17,10 @@ function addBookToLibrary(nombre,autor,pagina,estado){
 
 function iterateItems(arr){
     arr.forEach(i => {
-        console.log(i.title + i.author + i.pages + i.read)
+        campo.textContent(i.title)
+        campo.textContent(i.author)
+        campo.textContent(i.pages)
+        campo.textContent(i.read)
     });
 }
 
@@ -26,12 +29,14 @@ const modal = document.getElementById("modal")
 const cerrar_modal = document.getElementById("cerrar_modal")
 const identificador = document.getElementById("identificador")
 const formulario = document.querySelector(".formulario")
-const nombre = ""
-const autor = ""
-const paginas = ""
-const leido = ""
-const noleido = ""
-const estado = ""
+const llenar = document.querySelector(".llenar")
+const campo = document.querySelector(".campo")
+let nombre 
+let autor 
+let paginas 
+let leido 
+let noleido 
+let estado 
 
 abrir_modal.addEventListener("click",()=>{
     modal.showModal();
@@ -43,26 +48,34 @@ cerrar_modal.addEventListener("click",()=>{
 })
 
 formulario.addEventListener("submit",(e)=>{
+    console.log("ejecutano")
     e.preventDefault();
-    nombre = document.getElementById("nombre")
-    autor = document.getElementById("autor")
-    paginas = document.getElementById("paginas")
+    nombre = document.getElementById("nombre").value
+    console.log(nombre)
+    autor = document.getElementById("autor").value
+    console.log(autor)
+    paginas = document.getElementById("paginas").value
+    console.log(paginas)
     leido = document.getElementById("leido")
     noleido = document.getElementById("noleido")
 
-    if(leido.checked){
-        estado = "Read"
-        addBookToLibrary(nombre,autor,paginas,estado)
-    }
-
-    if(noleido.checked){
-        estado = "Unread"
-        addBookToLibrary(nombre,autor,paginas,estado)
-    }
 
     if(!noleido.checked && !leido.checked){
-        alert("Debe marcar el estado del libro")
+        alert("You must mark the book's status")
+    }else if(noleido.checked && leido.checked){
+        alert("You cannot select two states at the same time")
+    }else if(leido.checked){
+        estado = leido.value
+        console.log(estado)
+        addBookToLibrary(nombre,autor,paginas,estado)
+    }else if(noleido.checked){
+        estado = noleido.value
+        console.log(estado)
+        addBookToLibrary(nombre,autor,paginas,estado)
     }
-
+    llenar.reset();
 })
+
+
+
 
