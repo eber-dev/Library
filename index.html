@@ -23,36 +23,32 @@
                 <button id="cerrar_modal">X</button>
             </div>
             <div class="formulario">
-                <form action="" method="dialog">
+                <form action="" method="post" class="llenar">
                     <div id="identificador"></div>
                     <div class="info">
                         <label for="nombre">Name: </label>
-                        <input type="text" id="nombre" name="nombre">
+                        <input type="text" id="nombre" name="nombre" required>
                     </div>
                     <div class="info">
                         <label for="autor">Author</label>
-                        <input type="text" id="autor" name="autor">
+                        <input type="text" id="autor" name="autor" required>
                     </div>
                     <div class="info">
                         <label for="paginas">Pages: </label>
-                        <input type="number" id="paginas" name="paginas">
+                        <input type="number" id="paginas" name="paginas" required>
                     </div>
                     <div class="marca">
                         <label for="leido">Read: </label>
-                        <input type="checkbox" id="leido" name="leido">
+                        <input type="checkbox" id="leido" name="leido" value="Read">
                         <label for="noleido">Not Read: </label>
-                        <input type="checkbox" id="noleido" name="noleido">
+                        <input type="checkbox" id="noleido" name="noleido" value="Unread">
                     </div>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
         </dialog>
 
-
-
-
-
-        
+      
         <div class="campo"></div>
     </div>
 
