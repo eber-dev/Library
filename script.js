@@ -50,6 +50,14 @@ function addCart(arr){
     cartas.appendChild(contenedor_botones)
     contenedor_botones.appendChild(eliminar)
     contenedor_botones.appendChild(cambiar)
+
+    eliminar.addEventListener("click",()=>{
+        cartas.remove()
+    })
+
+    cambiar.addEventListener("click", (e)=>{
+
+    })
 }
 
 const abrir_modal = document.getElementById("abrir_modal")
