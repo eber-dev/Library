@@ -184,3 +184,12 @@ body{
     background-color: red;
     color: white;
 }
+
+.delete:hover , .change:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.delete:active , .change:active{
+    transform: scale(0.90);
+}
