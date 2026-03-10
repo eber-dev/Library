@@ -32,6 +32,7 @@ function addCart(arr){
     const contenedor_botones = document.createElement("div")
     contenedor_botones.classList.add("botones_card")
     const eliminar = document.createElement("button")
+    cartas.dataset.id = arr.at(-1).id
     const cambiar = document.createElement("button")
     numero_libro.textContent = "ID: "+arr.at(-1).id       
     cartanombre.textContent = arr.at(-1).title
