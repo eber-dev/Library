@@ -37,17 +37,25 @@ body{
     font-size: 1.3rem;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0.3rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+}
+
+.header > button:active{
+    transform: scale(0.95);
+    cursor: pointer;
+}
+
+.header > button > img{
+    width: 2.5rem;
+    height: auto;
 }
 
 .header_form{
     display: flex;
     align-items: center;
-    border: 1px solid black;
     justify-content: space-between;
     margin-bottom: 1.3rem;
 }
@@ -72,7 +80,6 @@ body{
 
 #identificador{
     margin-bottom: 0.5rem;
-    border: 1px solid blue;
     font-size: 19px;
 }
 
@@ -80,7 +87,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    border: 1px solid black;
 }
 
 .info > label {
@@ -97,7 +103,6 @@ body{
 
 .marca{
     display: flex;
-    border: 1px solid black;
     gap: 0.8rem;
     align-items: center;
     justify-content: space-between;
@@ -117,9 +122,14 @@ body{
 .formulario > form > button{
     margin-inline: 7.5rem;
     font-size: 17px;
-    padding: 0.4rem;
+    padding: 0.5rem;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.formulario > form > button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .campo{
