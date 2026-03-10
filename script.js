@@ -4,6 +4,7 @@ function Book(title, author , pages, read){
     if(!new.target){
         throw Error("Usted debe utilizar el operador new para llamar al constructor")
     }
+    this.id = crypto.randomUUID().slice(0,8)
     this.title = title
     this.author = author
     this.pages = pages
@@ -32,7 +33,7 @@ function addCart(arr){
     contenedor_botones.classList.add("botones_card")
     const eliminar = document.createElement("button")
     const cambiar = document.createElement("button")
-    numero_libro.textContent = id       
+    numero_libro.textContent = "ID: "+arr.at(-1).id       
     cartanombre.textContent = arr.at(-1).title
     cartaautor.textContent = arr.at(-1).author
     cartapagina.textContent = arr.at(-1).pages + " pages"
@@ -53,11 +54,9 @@ function addCart(arr){
 const abrir_modal = document.getElementById("abrir_modal")
 const modal = document.getElementById("modal")
 const cerrar_modal = document.getElementById("cerrar_modal")
-const identificador = document.getElementById("identificador")
 const formulario = document.querySelector(".formulario")
 const llenar = document.querySelector(".llenar")
 const campo = document.querySelector(".campo")
-let id
 let nombre 
 let autor 
 let paginas 
@@ -67,7 +66,6 @@ let estado
 
 abrir_modal.addEventListener("click",()=>{
     modal.showModal();
-    id = identificador.textContent = `ID: ${crypto.randomUUID().slice(0,8)}`
 })
 
 cerrar_modal.addEventListener("click",()=>{
