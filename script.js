@@ -58,6 +58,14 @@ function addCart(arr){
     cartaestado.textContent = arr.at(-1).read
     eliminar.textContent = "Eliminar"
     cambiar.textContent = estado
+    switch(estado){
+        case "Read":
+            cambiar.style.backgroundColor ="#39FF14";
+            break
+        case "Unread":
+            cambiar.style.backgroundColor = "#00FFFF"
+            break
+    }
     campo.appendChild(cartas)
     cartas.appendChild(numero_libro)
     cartas.appendChild(cartanombre)
@@ -86,6 +94,14 @@ function addCart(arr){
                 elemento.alternar(cartas.dataset.id)
                 cambiar.textContent = elemento.read
                 cartaestado.textContent = elemento.read
+            switch(elemento.read){
+                case "Read":
+                    cambiar.style.backgroundColor ="#39FF14";
+                    break
+                case "Unread":
+                    cambiar.style.backgroundColor = "#00FFFF"
+                    break
+            }
             }
         })
     })
