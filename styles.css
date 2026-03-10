@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(245, 243, 243);
+    margin: 0;
+    padding: 0;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -131,6 +137,7 @@
     width: 80%;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 
 .editarlibro > p{
@@ -161,7 +168,6 @@
 }
 
 .botones_card{
-    border: 1px solid blue;
     display: flex;
     margin: 0.5rem;
     gap: 2.5rem;
