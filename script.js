@@ -51,8 +51,16 @@ function addCart(arr){
     contenedor_botones.appendChild(eliminar)
     contenedor_botones.appendChild(cambiar)
 
+    console.log(myLibrary)
+
     eliminar.addEventListener("click",()=>{
         cartas.remove()
+        myLibrary.forEach((elemento,indice)=>{
+            if(elemento.id == cartas.dataset.id){
+                myLibrary.splice(indice,1)
+            }
+        })
+        console.log(myLibrary)
     })
 
     cambiar.addEventListener("click", (e)=>{
@@ -106,6 +114,7 @@ formulario.addEventListener("submit",(e)=>{
     llenar.reset();
     modal.close()
 })
+
 
 
 
