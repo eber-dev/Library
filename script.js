@@ -11,6 +11,21 @@ function Book(title, author , pages, read){
     this.read = read
 }
 
+Book.prototype.alternar = function(id){
+    myLibrary.forEach((elemento)=>{
+        if(elemento.id == id){
+            switch(elemento.read){
+                case "Read":
+                    elemento.read = "Unread"
+                    break;
+                case "Unread":
+                    elemento.read = "Read"
+                    break;
+            }
+        }
+    })
+}
+
 function addBookToLibrary(nombre,autor,pagina,estado){
     const libro = new Book(nombre,autor,pagina,estado)
     myLibrary.push(libro)
@@ -63,8 +78,14 @@ function addCart(arr){
         console.log(myLibrary)
     })
 
-    cambiar.addEventListener("click", (e)=>{
-
+    cambiar.addEventListener("click", ()=>{
+        myLibrary.forEach((elemento)=>{
+            if(elemento.id == cartas.dataset.id){
+                elemento.alternar(cartas.dataset.id)
+                cambiar.textContent = elemento.read
+                cartaestado.textContent = elemento.read
+            }
+        })
     })
 }
 
