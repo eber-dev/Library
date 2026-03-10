@@ -28,17 +28,26 @@ function addCart(arr){
     cartapagina.classList.add("editarpagina")
     const cartaestado = document.createElement("p")
     cartaestado.classList.add("editarestado")
+    const contenedor_botones = document.createElement("div")
+    contenedor_botones.classList.add("botones_card")
+    const eliminar = document.createElement("button")
+    const cambiar = document.createElement("button")
     numero_libro.textContent = id       
     cartanombre.textContent = arr.at(-1).title
     cartaautor.textContent = arr.at(-1).author
-    cartapagina.textContent = arr.at(-1).pages
+    cartapagina.textContent = arr.at(-1).pages + " pages"
     cartaestado.textContent = arr.at(-1).read
+    eliminar.textContent = "Eliminar"
+    cambiar.textContent = estado
     campo.appendChild(cartas)
     cartas.appendChild(numero_libro)
     cartas.appendChild(cartanombre)
     cartas.appendChild(cartaautor)
     cartas.appendChild(cartapagina)
     cartas.appendChild(cartaestado)
+    cartas.appendChild(contenedor_botones)
+    contenedor_botones.appendChild(eliminar)
+    contenedor_botones.appendChild(cambiar)
 }
 
 const abrir_modal = document.getElementById("abrir_modal")
@@ -58,7 +67,7 @@ let estado
 
 abrir_modal.addEventListener("click",()=>{
     modal.showModal();
-    id = identificador.textContent = `ID: ${crypto.randomUUID()}`
+    id = identificador.textContent = `ID: ${crypto.randomUUID().slice(0,8)}`
 })
 
 cerrar_modal.addEventListener("click",()=>{
