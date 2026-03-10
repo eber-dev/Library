@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>My Library</title>
 </head>
 <body>
     <div class="container">
@@ -13,13 +13,12 @@
             <h1>My Library</h1>
             <button id="abrir_modal">
                 <img src="./images/library_add.svg" alt="añadir">
-                Add Book
             </button>
         </div>
 
         <dialog id="modal">
             <div class="header_form">
-                <p>Add Book</p>
+                <p>New Book</p>
                 <button id="cerrar_modal">X</button>
             </div>
             <div class="formulario">
@@ -34,7 +33,7 @@
                     </div>
                     <div class="info">
                         <label for="paginas">Pages: </label>
-                        <input type="number" id="paginas" name="paginas" required>
+                        <input type="number" id="paginas" name="paginas" min="1" required>
                     </div>
                     <div class="marca">
                         <label for="leido">Read: </label>
@@ -42,7 +41,7 @@
                         <label for="noleido">Not Read: </label>
                         <input type="checkbox" id="noleido" name="noleido" value="Unread">
                     </div>
-                    <button type="submit">Enviar</button>
+                    <button type="submit">Add Book</button>
                 </form>
             </div>
         </dialog>
