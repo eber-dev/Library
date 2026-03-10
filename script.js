@@ -82,14 +82,10 @@ cerrar_modal.addEventListener("click",()=>{
 })
 
 formulario.addEventListener("submit",(e)=>{
-    console.log("ejecutano")
     e.preventDefault();
     nombre = document.getElementById("nombre").value
-    console.log(nombre)
     autor = document.getElementById("autor").value
-    console.log(autor)
     paginas = document.getElementById("paginas").value
-    console.log(paginas)
     leido = document.getElementById("leido")
     noleido = document.getElementById("noleido")
 
@@ -100,12 +96,10 @@ formulario.addEventListener("submit",(e)=>{
         alert("You cannot select two states at the same time")
     }else if(leido.checked){
         estado = leido.value
-        console.log(estado)
         addBookToLibrary(nombre,autor,paginas,estado)
         addCart(myLibrary)
     }else if(noleido.checked){
         estado = noleido.value
-        console.log(estado)
         addBookToLibrary(nombre,autor,paginas,estado)
         addCart(myLibrary)
     }
