@@ -63,6 +63,7 @@ body{
 .header_form > p{
     font-size: 1.5rem;
     margin: 0;
+    font-weight: bold;
 }
 
 .header_form > button{
@@ -112,7 +113,7 @@ body{
 
 .marca > label{
     font-size: 20px;
-}
+}   
 
 .marca > input{
     width: 1.2rem;
@@ -125,6 +126,8 @@ body{
     padding: 0.5rem;
     border: 1px solid black;
     border-radius: 10px;
+    background-color: rgb(32, 32, 242);
+    color: white;
 }
 
 .formulario > form > button:hover{
