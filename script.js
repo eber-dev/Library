@@ -56,7 +56,7 @@ function addCart(arr){
     cartaautor.textContent = arr.at(-1).author
     cartapagina.textContent = arr.at(-1).pages + " pages"
     cartaestado.textContent = arr.at(-1).read
-    eliminar.textContent = "Eliminar"
+    eliminar.textContent = "Delete"
     cambiar.textContent = estado
     switch(estado){
         case "Read":
